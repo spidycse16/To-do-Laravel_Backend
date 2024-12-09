@@ -9,12 +9,7 @@ use Illuminate\Support\Facades\Validator;
 class TodoController extends Controller
 {
  
-    // public function __construct()
-    // {
-    //     $this->middleware('auth:sanctum');
-    // }
 
-    // Get all todos for a user
     public function index(Request $request)
     {
         $todos = Todo::where('user_id', $request->user()->id)->get();
